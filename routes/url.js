@@ -66,7 +66,7 @@ router.get("/", async (req, res) => {
 	}
 });
 
-router.get("/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
 	try {
 		console.log(req.params)
 		const query = await Url.deleteOne({_id: req.params.id});
