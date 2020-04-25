@@ -1,8 +1,8 @@
-POST http://localhost:3000/api/url/shorten
+POST https://urlie.herokuapp.com/api/url/shorten
 Content-Type: application/json
 
 {
-    "longUrl": "https://www.amazon.in/Learning-GraphQL-Declarative-Fetching-Modern/dp/1492030716",
-    "customCode": "gqlbook",
-    "title": "Amazon GraphQL BooK"
+    "longUrl": "https://github.com/dsckiet/url-shortner-backend",
+    "customCode": "url",
+    "title": "GIthub Repo. link"
 }

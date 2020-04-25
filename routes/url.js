@@ -66,4 +66,19 @@ router.get("/", async (req, res) => {
 	}
 });
 
+router.get("/:id", async (req, res) => {
+	try {
+		console.log(req.params)
+		const query = await Url.deleteOne({_id: req.params.id});
+		if(query.n === 1) {
+			return res.json({message: "deleted"});
+		} else {
+			return res.json({message: "not deleted"});
+		}
+	} catch (err) {
+		console.error(err);
+		res.status(500).json("server error");
+	}
+});
+
 module.exports = router;
